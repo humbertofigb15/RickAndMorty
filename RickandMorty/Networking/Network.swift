@@ -6,7 +6,7 @@
 import Foundation
 import Network
 
-// MARK: - APIError
+// APIError
 enum APIError: LocalizedError, Equatable {
     case offline
     case invalidURL
@@ -25,7 +25,7 @@ enum APIError: LocalizedError, Equatable {
     }
 }
 
-// MARK: - RMAPI  (https://rickandmortyapi.com/)
+// RMAPI
 struct RMAPI {
     private let base = "https://rickandmortyapi.com/api"
     private let session: URLSession
@@ -60,7 +60,7 @@ struct RMAPI {
     }
 }
 
-// MARK: - NetworkMonitor
+// NetworkMonitor
 final class NetworkMonitor: ObservableObject {
     private let monitor = NWPathMonitor()
     private let queue = DispatchQueue(label: "NetworkMonitor")
